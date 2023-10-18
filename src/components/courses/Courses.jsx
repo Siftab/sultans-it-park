@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Course from "../Course/Course";
 import './Courses.css'
 import Cart from "../cart/Cart";
+import { checkCart } from "../Utils/LocalStorage";
 
 
 const Courses = () => {
@@ -17,7 +18,8 @@ const Courses = () => {
 const handleCart=(props)=>{
     const newCart = [...cart,props];
     setCart(newCart);
-    // console.log(newCart)
+    // const chk=checkCart();
+    // console.log(chk)
 }
     return (
         <div>
