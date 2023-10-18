@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import './Course.css'
-const Course = ({props}) => {
-    console.log(props)
+const Course = ({props,handleCart}) => {
+    // console.log(props)
     const {course_name,description,duration,image_url}=props;
     return (
         <div className='card'> 
@@ -9,7 +9,7 @@ const Course = ({props}) => {
             <h2>{course_name}</h2>
              <p>{description}</p>
              <p>Duration: {duration}</p>
-             <button>Add to cart</button>
+             <button onClick={()=>handleCart(props)}>Add to cart</button>
         </div>
     );
 };
